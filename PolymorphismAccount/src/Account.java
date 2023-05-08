@@ -15,7 +15,7 @@ private String countryOfAccount;
     public static Account getClass(String type, String countryOfAccount,  String branch, String currency, double intrestRate, double balance){
 
         char q = type.toUpperCase().charAt(0);
-           // type.getClass().getSimpleName();
+
         return switch(q){
             case 'S' -> new SavingAccount( countryOfAccount ,  branch,  currency,  intrestRate, balance);
             case 'C' -> new CurrentAccount(countryOfAccount ,  branch,  currency,  intrestRate, balance);
